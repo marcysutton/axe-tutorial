@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>aXe Live Tutorial</title>
+
+		<meta name="description" content="Slides for the aXe Live Tutorial at Deque Systems">
+		<meta name="author" content="Marcy Sutton">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+
+		<link rel="stylesheet" href="plugin/accessibility-helpers/accessibility-helper.css">
+		<link rel="stylesheet" href="css/theme/custom.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/tomorrow.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-color="#fff" class="deque-title-slide">
+					<div class="left">
+						<img src="img/deque-logo.png" alt="Deque" class="plain deque">
+					</div>
+					<div class="right">
+						<h1>aXe Live Tutorial</h1>
+						<p>
+							Hosted by Marcy Sutton<br>
+							Senior Front-End Engineer, aXe Core Team
+						</p>
+						<p><a href="https://marcysutton.github.io/axe-webinar">https://marcysutton.github.io/axe-webinar</a></p>
+					</div>
+				</section>
+
+				<section>
+					<h2>Goals for Today</h2>
+					<ul>
+						<li>Basics of accessibility debugging</li>
+						<li>Identify bugs with aXe Chrome</li>
+						<li>Set up a test with axe-core</li>
+						<li>Demo axe-webdriverjs</li>
+						<li>Install axe-cli</li>
+						<li>Ask questions</li>
+						<li>Have fun!</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Basics of a11y debugging</h2>
+					<ol>
+						<li>Keyboard testing</li>
+						<li>Run the aXe Chrome extension</li>
+						<li>Open menus/dialogs, run it again</li>
+						<li>Check headings, page structure</li>
+					</ol>
+				</section>
+
+				<section style="padding-top: 0 !important">
+					<h2>aXe Chrome</h2>
+					<figure>
+						<figcaption><a href="http://bit.ly/axe-chrome">http://bit.ly/axe-chrome</a></figcaption>
+						<img data-src="img/axe-chrome-store.png" alt="aXe Chrome Extension" height="800" style="display: inline-block;">
+					</figure>
+				</section>
+
+				<section style="padding-top: 0 !important">
+					<h2>aXe Firefox</h2>
+					<figure>
+						<figcaption><a href="http://bit.ly/axe-firefox">http://bit.ly/axe-firefox</a></figcaption>
+						<img data-src="img/axe-firefox-store.jpg" alt="aXe Firefox Extension" style="display: inline-block;">
+					</figure>
+				</section>
+
+				<section>
+					<h2>Let’s Demo!</h2>
+					<figure><a href="https://dequeuniversity.com/demo/mars/">https://dequeuniversity.com/demo/mars/</a></figure>
+				</section>
+
+				<section>
+					<h2>aXe-core JavaScript API</h2>
+					<figure>
+						<figcaption><a href="https://github.com/dequelabs/axe-core">https://github.com/dequelabs/axe-core</a></figcaption>
+						<img data-src="img/axe-core-github.jpg" alt="aXe-core on Github">
+					</figure>
+				</section>
+
+				<section>
+					<h2>Things you’ll need:</h2>
+					<ul>
+						<li>A terminal</li>
+						<li><a href="https://nodejs.org/en/">Node.js and npm</a></li>
+						<li>Something to test</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Unit Test Demo</h2>
+					<figure><a href="https://github.com/marcysutton/axe-jasmine-unit">https://github.com/marcysutton/axe-jasmine-unit</a></figure>
+				</section>
+
+				<section>
+					<h2>aXe-WebdriverJS Utility</h2>
+					<figure>
+						<figcaption><a href="https://github.com/dequelabs/axe-webdriverjs">https://github.com/dequelabs/axe-webdriverjs</a></figcaption>
+						<img data-src="img/axe-webdriverjs-github.jpg" alt="aXe-webdriverjs on Github">
+					</figure>
+				</section>
+
+				<section>
+					<h2>Integration Test Demo</h2>
+					<figure><a href="https://github.com/marcysutton/axe-webdriverjs-demo">https://github.com/marcysutton/axe-webdriverjs-demo</a></figure>
+				</section>
+
+				<section>
+					<h2>aXe-CLI</h2>
+					<figure>
+						<figcaption><a href="https://github.com/dequelabs/axe-cli">https://github.com/dequelabs/axe-cli</a></figcaption>
+						<img data-src="img/axe-cli-github.jpg" alt="aXe-cli on Github">
+					</figure>
+				</section>
+
+				<section>
+					<h2>Install and run axe-cli</h2>
+					<figure class="code large inset">
+						<pre><code class="bash">
+  $ npm install axe-cli -g
+
+  $ axe https://google.com
+						</code></pre>
+					</figure>
+					<p><a href="https://docs.npmjs.com/getting-started/fixing-npm-permissions">https://docs.npmjs.com/getting-started/fixing-npm-permissions</a></p>
+				</section>
+
+				<section>
+					<h2>Questions?</h2>
+					<p>Thanks for joining today! I’d love to hear what you learned :)</p>
+					<ul>
+						<li><a href="https://gitter.im/dequelabs/axe-core">https://gitter.im/dequelabs/axe-core</a></li>
+						<li><a href="https://twitter.com/marcysutton">https://twitter.com/marcysutton</a></li>
+					</ul>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+			    width: '100%',
+			    margin: 0,
+					controls: true,
+					progress: true,
+					history: true,
+					center: true,
+
+	        keyboard: {
+	          13: 'next', // go to the next slide when the ENTER key is pressed
+	          27: function() {}/*, // do something custom when ESC is pressed
+	          37: null,
+	          39: null // don't do anything when SPACE is pressed (i.e. disable a reveal.js default binding)*/
+	        },
+
+				transition: 'none', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/accessibility-helpers/accessibility-helpers.js', async: true}
+				]
+			});
+
+		</script>
+	</body>
+</html>

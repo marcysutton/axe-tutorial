@@ -1,0 +1,345 @@
+@import 'white';
+
+$codeBgColor: #181818;
+$dequeLogoColor: #00274d;
+$dequeBgColor: #BFC9D3;
+$accentColor: #8dc63f;
+
+$tablet: 'screen and (max-width: 1024px)';
+$mobile: 'screen and (max-width: 600px)';
+
+.reveal {
+  ul.code {
+    border: 2px solid;
+    font-family: $codeFont;
+    list-style: none;
+    li {
+      border-top: 2px  solid;
+      padding: 10px;
+
+      &:first-child {
+        border-top: none;
+      }
+      &:nth-child(2n) {
+        background-color: #eae5e5;      
+      }
+    }
+  }
+  ul.smaller > li {
+    font-size: 0.8em;
+    margin-bottom: 0.5em;
+  }
+  ul {
+    h3 {
+      @extend .h4-style;
+      margin-bottom: 0;
+    }
+  }
+  .subhead {
+    @extend h4;
+    display: block;
+    font-size: 0.75em;
+    font-style: italic;
+    font-weight: bold;
+  }
+  .border-after {
+    display: inline-block;
+    position: relative;
+
+    &:after {
+      border-bottom: 4px solid;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: -10px;
+      width: 100%;
+    }
+  }
+  .all-caps {
+    text-transform: uppercase;
+  }
+  .offscreen {
+    position: absolute;
+    left: -500000px;
+  }
+  .progress {
+    background-color: $dequeBgColor;
+    height: 15px;
+
+    span {
+      background: $accentColor;
+      box-shadow: 2px 1px 3px #666;
+    }
+  }
+  .controls {
+    bottom: 110px;
+  }
+
+  pre code, code {
+    font-family: $codeFont;
+    max-height: 520px;
+  }
+  pre.large {
+    font-size: 0.75em;
+  }
+  figure.code {
+    box-sizing: border-box;
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+
+    *, *:before, *:after {
+      box-sizing: border-box;
+    }
+
+    &.inset {
+      width: 70%;
+    }
+
+    &.large pre {
+      font-size: 1.25em;
+    }
+
+    pre {
+      box-shadow: none;
+      margin-bottom: 0;
+      width: 100%;
+
+      &+ figcaption {
+        background-color: #333;
+        color: #fff;
+        font-size: 0.8em;
+        font-style: normal;
+        font-weight: bold;
+        margin-bottom: 25px;
+        padding: 10px 0 10px 20px;
+        width: 100%;
+
+        a {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+      code {
+        background-color: lighten($dequeBgColor, 15%);
+      }
+    }
+  }
+  .regular-case {
+    text-transform: none;
+  }
+  .subhead {
+    font-style: italic;
+    @extend .regular-case;
+  }
+  .plain {
+    background-color: transparent;
+  }
+}
+/*********************************************
+ * LAYOUTS
+ *********************************************/
+.reveal li .twoThirdsCol {
+  padding-top: 2%;
+
+  small {
+    clear: both;
+    display: block;
+    text-align: center;
+  }
+}
+.reveal .wideCol {
+  vertical-align: top;
+  width: 54%;
+
+  &.twoThirdsCol {
+    float: left;
+  }
+}
+.reveal .skinnyCol {
+  vertical-align: top;
+  width: 44%;
+
+  &.twoThirdsCol {
+    float: left;
+    margin-right: 2%;
+  }
+}
+.reveal .twoThirdsCol pre {
+  font-size: .59em;
+  margin-top: 0;
+  width: 100%;
+}
+.reveal .halfCol {
+  display: inline-block;
+  width: 48%;
+}
+
+.reveal .layeredFragments {
+  margin: 0 auto;
+  min-height: 1000px;
+  position: relative;
+  width: 100%;
+
+  &>img, 
+  &>figure {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+    width: 100%;
+  }
+  &.wordcloud {
+    position: absolute;
+    top: 0;
+
+    .fragment {
+      position: absolute;
+    }
+  }
+}
+.reveal {
+  .responsive-video {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+
+    iframe, object, embed, video {
+      position:absolute;
+      top: 0;
+      left: 0;
+      max-height: 720px;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+/*********************************************
+ * Custom Slides
+ *********************************************/
+
+.deque-title-slide {
+  &.slide-background:after {
+    background-color: $dequeBgColor;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 100px;
+    max-height: 10%;
+    position: absolute;
+    width: 100%;
+  }
+  .left {
+    float: left;
+  }
+    img.deque {
+      max-width: 400px;
+      margin: -8% 0 0;
+    }
+  .right {
+    float: right;
+    padding-top: 8%;
+    text-align: left;
+    width: 65%;
+  }
+  @media #{$tablet} {
+    &.slide-background:after {
+      display: none;
+    }
+    .left {
+      img.deque {
+        max-width: 300px;
+      }
+    }
+    .right {
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+  }
+  @media #{$mobile} {
+    .left {
+      float: none;
+      img.deque {
+        margin: 0 auto;
+      }
+    }
+    .right {
+      float: none;
+      margin: 0 auto;
+      width: 90%;
+      h1 {
+        font-size: 1.5em;
+        text-align:  center;
+      }
+      p {
+        font-size: 0.75em;
+      }
+    }
+  }
+}
+.reveal ul.thumbsup {
+  list-style-image: url(../../img/thumbsup-sm.png);
+  list-style-position: inside;
+}
+.imgCarousel {
+  button {
+    display: inline-block;
+    max-width: 20%;
+    vertical-align: middle;
+    transition: max-width 0.5s ease-out;
+
+    &:after {
+      content: '';
+      display: block;
+      font-size: 1.5em;
+      font-weight: bold;
+      margin: 0.5em 0;
+    }
+
+    &:hover,
+    &:focus {
+      max-width: 50%;
+
+      &:after {
+        content: attr(data-alt);
+      }
+    }
+  }
+  img {
+    height: 100%;
+    width: 100%;
+  }
+}
+#oh-hai-images {
+  margin-top: 1em;
+  text-align: center;
+
+  img, div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  div {
+    max-width: 320px;
+    margin: 0 20px 0 10px;
+    text-align: center;
+  }
+  .angular {
+    max-width: 300px;
+  }
+  .axe {
+    background-color: #fff;
+    padding: 10px;
+    width: 300px;
+  }
+  .gdi {
+    max-width: 250px;
+  }
+  .slack {
+    max-width: 320px;
+  }
+}
