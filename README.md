@@ -1,7 +1,5 @@
 # aXe Live Tutorial
 
-Slides for the aXe Hackathon at CSUN 2017
-
 By Marcy Sutton, Senior Front-end Engineer at Deque Systems
 
 Slide URL: [http://marcysutton.github.io/axe-tutorial](http://marcysutton.github.io/axe-tutorial)
