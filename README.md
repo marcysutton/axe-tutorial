@@ -1,10 +1,10 @@
-# aXe Hackathon
+# aXe Live Tutorial
 
 Slides for the aXe Hackathon at CSUN 2017
 
 By Marcy Sutton, Senior Front-end Engineer at Deque Systems
 
-Slide URL: [http://marcysutton.github.io/axe-hackathon](http://marcysutton.github.io/axe-hackathon)
+Slide URL: [http://marcysutton.github.io/axe-tutorial](http://marcysutton.github.io/axe-tutorial)
 
 ## Installation
 
@@ -18,7 +18,7 @@ Some reveal.js features, like external Markdown and speaker notes, require that 
 
 4. Clone the repository
    ```sh
-   $ git clone https://github.com/marcysutton/axe-hackathon.git
+   $ git clone https://github.com/marcysutton/axe-tutorial.git
    ```
 
 5. Navigate to the project folder
